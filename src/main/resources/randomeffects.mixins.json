@@ -1,5 +1,5 @@
 {
-  "package": "com.example.modtemplate.mixin",
+  "package": "io.github.serafimdietrich.randomeffects.mixin",
   "required": true,
   "minVersion": "0.8",
   "compatibilityLevel": "${java}",

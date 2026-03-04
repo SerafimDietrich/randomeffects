@@ -63,8 +63,4 @@ tasks.named("createMinecraftArtifacts") {
 }
 
 stonecutter {
-	replacements.string(current.parsed >= "1.21.11") {
-		replace("ResourceLocation", "Identifier")
-		replace("location()", "identifier()")
-	}
 }

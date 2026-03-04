@@ -1,18 +1,13 @@
-package com.example.modtemplate.platform.neoforge;
+package io.github.serafimdietrich.randomeffects.platform.neoforge;
 
-//? neoforge {
+        //? neoforge {
 
-/*import com.example.modtemplate.ModTemplate;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+/*import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 
-@EventBusSubscriber(modid = ModTemplate.MOD_ID, value = Dist.CLIENT)
 public class NeoforgeClientEventSubscriber {
-	@SubscribeEvent
-	public static void onClientSetup(final FMLClientSetupEvent event) {
-		ModTemplate.onInitializeClient();
-	}
+    @SubscribeEvent
+    public static void onPlayerDamage(LivingDamageEvent.Post event) {
+    }
 }
-*///?}
+        *///?}

@@ -1,15 +1,16 @@
-package com.example.modtemplate.platform.neoforge;
+package io.github.serafimdietrich.randomeffects.platform.neoforge;
 
-//? neoforge {
+        //? neoforge {
 
-/*import com.example.modtemplate.ModTemplate;
+/*import io.github.serafimdietrich.randomeffects.RandomEffects;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.common.NeoForge;
 
-@Mod(ModTemplate.MOD_ID)
+@Mod(RandomEffects.MOD_ID)
 public class NeoforgeEntrypoint {
-
-	public NeoforgeEntrypoint() {
-		ModTemplate.onInitialize();
-	}
+    public NeoforgeEntrypoint() {
+        RandomEffects.onInitialize();
+        NeoForge.EVENT_BUS.register(NeoforgeEventSubscriber.class);
+    }
 }
-*///?}
+        *///?}

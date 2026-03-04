@@ -1,18 +1,17 @@
-package com.example.modtemplate.platform.fabric;
+package io.github.serafimdietrich.randomeffects.platform.fabric;
 
-//? fabric {
+        //? fabric {
 
-import com.example.modtemplate.ModTemplate;
 import dev.kikugie.fletching_table.annotation.fabric.Entrypoint;
+import io.github.serafimdietrich.randomeffects.RandomEffects;
 import net.fabricmc.api.ModInitializer;
 
 @Entrypoint("main")
 public class FabricEntrypoint implements ModInitializer {
-
-	@Override
-	public void onInitialize() {
-		ModTemplate.onInitialize();
-		FabricEventSubscriber.registerEvents();
-	}
+    @Override
+    public void onInitialize() {
+        RandomEffects.onInitialize();
+        FabricEventSubscriber.registerEvents();
+    }
 }
-//?}
+        //?}

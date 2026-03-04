@@ -16,7 +16,6 @@ platform {
 		required("fabricloader") {
 			versionRange = ">=${libs.fabric.loader.get().version}"
 		}
-		optional("modmenu") {}
 	}
 }
 
@@ -63,12 +62,7 @@ dependencies {
 	implementation(libs.moulberry.mixinconstraints)
 	include(libs.moulberry.mixinconstraints)
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${prop("deps.fabric-api")}")
-	modLocalRuntime("com.terraformersmc:modmenu:${prop("deps.modmenu")}")
 }
 
 stonecutter {
-	replacements.string(current.parsed >= "1.21.11") {
-		replace("ResourceLocation", "Identifier")
-		replace("location()", "identifier()")
-	}
 }

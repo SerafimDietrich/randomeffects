@@ -1,6 +1,6 @@
 package io.github.serafimdietrich.randomeffects;
 
-import io.github.serafimdietrich.randomeffects.gamerule.ModGameRules;
+import io.github.serafimdietrich.randomeffects.world.ModGameRules;
 import io.github.serafimdietrich.randomeffects.platform.Platform;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,6 +22,7 @@ public class RandomEffects {
     public static void onInitialize() {
         LOGGER.info("Initializing {} on {}", MOD_ID, xplat().loader());
         LOGGER.debug("{}: { version: {}; friendly_name: {} }", MOD_ID, MOD_VERSION, MOD_FRIENDLY_NAME);
+
         ModGameRules.register();
     }
 

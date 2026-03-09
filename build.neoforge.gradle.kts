@@ -56,6 +56,8 @@ repositories {
 dependencies {
 	implementation(libs.moulberry.mixinconstraints)
 	jarJar(libs.moulberry.mixinconstraints)
+	implementation(libs.mixinextras)
+	jarJar(libs.mixinextras)
 }
 
 tasks.named("createMinecraftArtifacts") {

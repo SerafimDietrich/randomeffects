@@ -10,13 +10,13 @@ public final class ModGameRules {
     public static GameRules.Key<GameRules.IntegerValue> randomEffectOnDamageDuration;
     public static GameRules.Key<GameRules.BooleanValue> randomEffectPerBlock;
     public static GameRules.Key<GameRules.IntegerValue> randomEffectTimer;
+    public static GameRules.Key<GameRules.BooleanValue> randomEffectTimerSameEffect;
 
     public static void register() {
         randomEffectOnDamage = GameRulesInvoker.register("randomEffectOnDamage", GameRules.Category.PLAYER, BooleanValueInvoker.create(false));
-        randomEffectOnDamageDuration = GameRulesInvoker.register("randomEffectOnDamageDuration", GameRules.Category.PLAYER, IntegerValueInvoker.create(0, -1, Integer.MAX_VALUE, (server, value) -> {
-        }));
+        randomEffectOnDamageDuration = GameRulesInvoker.register("randomEffectOnDamageDuration", GameRules.Category.PLAYER, IntegerValueInvoker.create(-1, -1, Integer.MAX_VALUE, (server, value) -> {}));
         randomEffectPerBlock = GameRulesInvoker.register("randomEffectPerBlock", GameRules.Category.PLAYER, BooleanValueInvoker.create(false));
-        randomEffectTimer = GameRulesInvoker.register("randomEffectTimer", GameRules.Category.PLAYER, IntegerValueInvoker.create(0, 0, Integer.MAX_VALUE, (server, value) -> {
-        }));
+        randomEffectTimer = GameRulesInvoker.register("randomEffectTimer", GameRules.Category.PLAYER, IntegerValueInvoker.create(0, 0, Integer.MAX_VALUE, (server, value) -> {}));
+        randomEffectTimerSameEffect = GameRulesInvoker.register("randomEffectTimerSameEffect", GameRules.Category.PLAYER, BooleanValueInvoker.create(true));
     }
 }

@@ -11,9 +11,12 @@
     "EntityMixin",
     "GameRulesInvoker",
     "IntegerValueInvoker",
+    "LevelMixin",
     "LivingEntityInvoker",
     "LivingEntityMixin",
-    "PlayerMixin"
+    "ObjectiveCriteriaInvoker",
+    "PlayerMixin",
+    "ServerLevelMixin"
   ],
   "client": []
 }

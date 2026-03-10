@@ -2,6 +2,7 @@ package io.github.serafimdietrich.randomeffects;
 
 import io.github.serafimdietrich.randomeffects.world.ModGameRules;
 import io.github.serafimdietrich.randomeffects.platform.Platform;
+import io.github.serafimdietrich.randomeffects.world.ModObjectiveCriteria;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 //? fabric {
@@ -24,6 +25,7 @@ public class RandomEffects {
         LOGGER.debug("{}: { version: {}; friendly_name: {} }", MOD_ID, MOD_VERSION, MOD_FRIENDLY_NAME);
 
         ModGameRules.register();
+        ModObjectiveCriteria.register();
     }
 
     public static void onInitializeClient() {

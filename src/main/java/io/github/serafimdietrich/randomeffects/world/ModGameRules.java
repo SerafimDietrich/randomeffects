@@ -7,11 +7,14 @@ import net.minecraft.world.level.GameRules;
 
 public final class ModGameRules {
     public static GameRules.Key<GameRules.BooleanValue> randomEffectOnDamage;
+    public static GameRules.Key<GameRules.IntegerValue> randomEffectOnDamageDuration;
     public static GameRules.Key<GameRules.BooleanValue> randomEffectPerBlock;
     public static GameRules.Key<GameRules.IntegerValue> randomEffectTimer;
 
     public static void register() {
         randomEffectOnDamage = GameRulesInvoker.register("randomEffectOnDamage", GameRules.Category.PLAYER, BooleanValueInvoker.create(false));
+        randomEffectOnDamageDuration = GameRulesInvoker.register("randomEffectOnDamageDuration", GameRules.Category.PLAYER, IntegerValueInvoker.create(0, -1, Integer.MAX_VALUE, (server, value) -> {
+        }));
         randomEffectPerBlock = GameRulesInvoker.register("randomEffectPerBlock", GameRules.Category.PLAYER, BooleanValueInvoker.create(false));
         randomEffectTimer = GameRulesInvoker.register("randomEffectTimer", GameRules.Category.PLAYER, IntegerValueInvoker.create(0, 0, Integer.MAX_VALUE, (server, value) -> {
         }));

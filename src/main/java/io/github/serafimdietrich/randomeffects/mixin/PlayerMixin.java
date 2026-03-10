@@ -38,7 +38,12 @@ public abstract class PlayerMixin extends LivingEntityMixin {
     @Inject(method = "actuallyHurt", at = @At("TAIL"))
     private void actuallyHurt(DamageSource damageSource, float damage, CallbackInfo ci) {
         if (this.level().getGameRules().getBoolean(ModGameRules.randomEffectOnDamage) && !damageSource.is(DamageTypes.MAGIC)) {
-            this.forceAddEffect(new MobEffectInstance(EffectUtils.getRandom(this.getRandom()), -1), null);
+            this.forceAddEffect(
+                    new MobEffectInstance(
+                            EffectUtils.getRandom(this.getRandom()),
+                            this.level().getGameRules().getInt(ModGameRules.randomEffectOnDamageDuration)
+                    ), null
+            );
         }
     }
 
